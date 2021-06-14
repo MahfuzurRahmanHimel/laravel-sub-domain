@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -18,8 +21,15 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
-        .home {
-            margin: 50px;
+        .welcome {
+            margin: 20px 10px 40px 10px;
+        }
+        .demo {
+            margin: 20px 10px 10px 10px;
+            font-weight: bold;
+        }
+        ul {
+            font-size: 14px;
         }
         .dashboard-item{
             margin-left: 30px;
@@ -27,17 +37,34 @@
     </style>
 </head>
 <body class="antialiased">
-<div class="container home">
-    <h3>Sub-Domains</h3>
-    @foreach($users as $user)
-        <div class="col-md-3 category-responsive dashboard-item">
-            <a href="{{ route('users.index', ['domain' => $user->domain]) }}" class="category-wrap">
-                <div class="category-block">
-                    <h4>{{ $user->domain }}</h4>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Sub Domains') }}</div>
+                    <div class="card-body">
+                        <div class="category-block">
+                            <p class="welcome">{{ __('Welcome to Alesha Card\'s public domain!') }}</p>
+                        </div>
+                        <div class="category-block">
+                            <p class="demo">{{ __('Users Sample Domain:') }}</p>
+                        </div>
+                        @foreach($users as $user)
+                            <div class="col-md-3 category-responsive dashboard-item">
+                                <a href="{{ route('users.index', ['domain' => $user->domain]) }}" class="category-wrap">
+                                    <div class="category-block">
+                                        <ul>
+                                            <ui>{{$user->domain}}</ui>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
-    @endforeach
-</div>
+    </div>
 </body>
 </html>
+@endsection

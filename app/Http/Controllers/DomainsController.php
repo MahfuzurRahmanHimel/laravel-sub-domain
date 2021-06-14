@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class DomainsController extends Controller
 {
@@ -16,6 +15,15 @@ class DomainsController extends Controller
     {
         $users = User::all();
         return view('welcome', compact('users'));
+    }
+    /**
+     * Show the application Home.
+     *
+     * @return
+     */
+    public function authHome(){
+        $users = User::all();
+        return view('home', compact('users'));
     }
 
     /**
