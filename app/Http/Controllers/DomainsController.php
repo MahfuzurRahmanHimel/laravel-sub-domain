@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class DomainsController extends Controller
 {
@@ -37,5 +39,16 @@ class DomainsController extends Controller
         $users = User::with('userRoles')->where('domain',$domain)->firstOrFail();
 
         return view('users.index', compact('users'));
+    }
+
+    /**
+     * Logout a user
+     *
+     * @param Request $request
+     * @return
+     */
+    public function logout()
+    {
+        dd(1);
     }
 }
