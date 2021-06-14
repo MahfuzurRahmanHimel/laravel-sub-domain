@@ -49,17 +49,23 @@
                         <div class="category-block">
                             <p class="demo">{{ __('Users Sample Domain:') }}</p>
                         </div>
-                        @foreach($users as $user)
-                            <div class="col-md-3 category-responsive dashboard-item">
-                                <a href="{{ route('users.index', ['domain' => $user->domain]) }}" class="category-wrap">
-                                    <div class="category-block">
-                                        <ul>
-                                            <ui>{{$user->domain}}</ui>
-                                        </ul>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
+                        <div class="col-md-3 category-responsive dashboard-item">
+                            <a href="{{ route('users.index', ['domain' => 'system']) }}" class="category-wrap">
+                                <div class="category-block">System</div>
+                            </a>
+                            <a href="{{ route('users.index', ['domain' => 'dashboard']) }}" class="category-wrap">
+                                <div class="category-block">Dashboard</div>
+                            </a>
+                            <a href="{{ route('users.index', ['domain' => 'support']) }}" class="category-wrap">
+                                <div class="category-block">Support</div>
+                            </a>
+                            <a href="{{ route('users.index', ['domain' => 'merchant']) }}" class="category-wrap">
+                                <div class="category-block">Merchant</div>
+                            </a>
+                            <a href="{{ route('users.index', ['domain' => 'member']) }}" class="category-wrap">
+                                <div class="category-block">Member</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
