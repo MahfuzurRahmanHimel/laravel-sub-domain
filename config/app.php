@@ -54,6 +54,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'local_url' => env('LOCAL_URL', 'http://127.0.0.1:8000'),
+
     'domain_url' => preg_replace('#^https?://#', '', rtrim(env('APP_URL', 'http://localhost'),'/')),
 
     'asset_url' => env('ASSET_URL', null),
@@ -179,6 +181,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\ValidatorServiceProvider::class,
         Felixkiss\UniqueWithValidator\ServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class
 
     ],
 
