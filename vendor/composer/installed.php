@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '2959d1690aade583bf950c79baa03e66f1397a49',
+        'reference' => '3c0dd4078f4b1885c5cfbe1d1ce1eeed45af195e',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -17,6 +17,15 @@
             'install_path' => __DIR__ . '/../asm89/stack-cors',
             'aliases' => array(),
             'reference' => '9cb795bf30988e8c96dd3c40623c48a877bc6714',
+            'dev_requirement' => false,
+        ),
+        'bacon/bacon-qr-code' => array(
+            'pretty_version' => '2.0.3',
+            'version' => '2.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bacon/bacon-qr-code',
+            'aliases' => array(),
+            'reference' => '3e9d791b67d0a2912922b7b7c7312f4b37af41e4',
             'dev_requirement' => false,
         ),
         'brick/math' => array(
@@ -33,6 +42,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'dasprid/enum' => array(
+            'pretty_version' => '1.0.3',
+            'version' => '1.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dasprid/enum',
+            'aliases' => array(),
+            'reference' => '5abf82f213618696dda8e3bf6f64dd042d8542b2',
+            'dev_requirement' => false,
         ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -394,6 +412,15 @@
                 0 => '*',
             ),
         ),
+        'laravel/fortify' => array(
+            'pretty_version' => 'v1.7.13',
+            'version' => '1.7.13.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/fortify',
+            'aliases' => array(),
+            'reference' => '1753d05c80f930cc2715051858900965b49f32d9',
+            'dev_requirement' => false,
+        ),
         'laravel/framework' => array(
             'pretty_version' => 'v8.46.0',
             'version' => '8.46.0.0',
@@ -409,7 +436,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '2959d1690aade583bf950c79baa03e66f1397a49',
+            'reference' => '3c0dd4078f4b1885c5cfbe1d1ce1eeed45af195e',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -538,6 +565,15 @@
             'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
             'dev_requirement' => false,
         ),
+        'paragonie/constant_time_encoding' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../paragonie/constant_time_encoding',
+            'aliases' => array(),
+            'reference' => 'f34c2b11eb9d2c9318e13540a1dbc2a3afbd939c',
+            'dev_requirement' => false,
+        ),
         'phar-io/manifest' => array(
             'pretty_version' => '2.0.1',
             'version' => '2.0.1.0',
@@ -654,6 +690,15 @@
             'aliases' => array(),
             'reference' => '89ff45ea9d70e35522fb6654a2ebc221158de276',
             'dev_requirement' => true,
+        ),
+        'pragmarx/google2fa' => array(
+            'pretty_version' => '8.0.0',
+            'version' => '8.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pragmarx/google2fa',
+            'aliases' => array(),
+            'reference' => '26c4c5cf30a2844ba121760fd7301f8ad240100b',
+            'dev_requirement' => false,
         ),
         'psr/container' => array(
             'pretty_version' => '1.1.1',
