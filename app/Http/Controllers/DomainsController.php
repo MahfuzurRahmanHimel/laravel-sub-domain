@@ -17,6 +17,15 @@ class DomainsController extends Controller
         $users = User::all();
         return view('welcome', compact('users'));
     }
+    /**
+     * Show the application Home.
+     *
+     * @return
+     */
+    public function authHome(){
+        $users = User::all();
+        return view('home', compact('users'));
+    }
 
     /**
      * Display a listing of the resource.
