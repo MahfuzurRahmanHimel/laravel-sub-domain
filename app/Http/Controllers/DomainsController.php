@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -25,8 +25,12 @@ class DomainsController extends Controller
      */
     public function index($domain)
     {
+        // dd($domain);
+        if(!(Auth::check())){
+            return redirect()->route('login')->with('domain',$domain);
+        }
         $users = User::with('userRoles')->where('domain',$domain)->firstOrFail();
 
-        return view('users.index', compact('users'));
+        return view('home', compact('users'));
     }
 }
